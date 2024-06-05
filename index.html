@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#catalogue">Catalogue</a></li>
+            <li><a href="#order">Order Online</a></li>
+            <li><a href="#login" id="loginLink">Login</a></li>
+            <li><a href="#signup" id="signupLink">Sign Up</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <section id="catalogue">
+        <h1>Catalogue</h1>
+        <div class="dish-card">
+            <img src="paneer butter masala.jpg" alt="Butter Paneer Masala">
+                <h2>Butter Paneer Masala</h2>
+                <div class="dish-info">
+                    <p>A creamy and flavorful Indian dish made with paneer (Indian cottage cheese) cooked in a rich tomato-based sauce with butter and spices.</p>
+                </div>
+                <p>$12</p>
+        </div>
+        <div class="dish-card">
+            <img src="Nihari-matka.jpg" alt="Nihari">
+            <h2>Nihari</h2>
+            <div class="dish-info">
+                <p>Nihari is a stew originating in Lucknow, the capital of 18th-century Awadh under the Mughal Empire in the Indian subcontinent. It consists of slow-cooked meat, mainly a shank cut of beef, lamb and mutton, or goat meat, as well as chicken and bone marrow.</p>
+            </div>
+            <p>$15</p>
+        </div>
+        <div class="dish-card">
+            <img src="qorma.jpg" alt="Qorma">
+            <h2>Qorma</h2>
+            <div class="dish-info">
+                <p>Korma or qorma is a dish with its origin in the Indian subcontinent, consisting of meat or vegetables braised with yogurt (dahi), water or stock, and spices to produce a thick sauce or gravy.</p>
+            </div>
+            <p>$14</p>
+        </div>
+        <div class="dish-card">
+            <img src="yakhani-kashmiri.jpg" alt="Yakani">
+            <h2>Yakani</h2>
+            <div class="dish-info">
+                <p>Yakhni refers to stock or broth of beef, chicken, lamb or mutton. It is touted for its health benefits and is often the base for many foods including pulao  and other shorbas (soups).</p>
+            </div>
+            <p>$13</p>
+        </div>
+        <div class="dish-card">
+            <img src="dal makhni.jpg" alt="Dal Makhni">
+            <h2>Dal Makhni</h2>
+            <div class="dish-info">
+                <p>Dal makhani is a dish originating in Punjab region. A relatively modern variation of traditional lentil dishes, it is made with urad dal (black lentils) and other pulses, and includes butter and cream.</p>
+            </div>
+            <p>$10</p>
+        </div>
+    </section>
+    
+    <section id="order">
+        <h1>Order Online</h1>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"><br>
+            <label for="dish">Dish:</label>
+            <select id="dish" name="dish">
+                <option value="Butter Paneer Masala">Butter Paneer Masala</option>
+                <option value="Nihari">Nihari</option>
+                <option value="Qorma">Qorma</option>
+                <option value="Yakani">Yakani</option>
+                <option value="Dal Makhni">Dal Makhni</option>
+            </select><br>
+            <button type="submit">Order</button>
+        </form>
+    </section>
+
+    <section id="reviews">
+        <h1>Reviews</h1>
+        <ul id="reviewsList"></ul>
+        <form id="reviewForm">
+            <label for="review">Leave a review:</label>
+            <input type="text" id="review" name="review"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h1>Sign Up</h1>
+            <form id="signupForm">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="newUsername"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword"><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
